@@ -5,7 +5,7 @@ process.stdin.on('readable', function() {
 	// metoda .read() ma za zadanie odczytać co użytkownik podał na wejściu
 	var input = process.stdin.read();
 	var help = 'ver - node version\n\
-    			compinfo - system information\n\
+    			osinfo - system information\n\
     			lang - OS language\n\
    				help - this info\n\
     			exit - exit program\n';
