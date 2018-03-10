@@ -1,18 +1,16 @@
 var os = require('os');
+var uptime = require('../modules/time');
+var release = os.release();
+var cpu = os.cpus()[0].model;
+var userInfo = os.userInfo();
+var type = os.type();
 
 function getOsInfo() {
-	var type = os.type();
 	if(type === 'Darwin') {
     	type = 'OSX';
 	} else if(type === 'Windows_NT') {
     	type = 'Windows';
 	}
-
-	var release = os.release();
-	var cpu = os.cpus()[0].model;
-	//var uptime = os.uptime();
-	var uptime = require('../modules/time');
-	var userInfo = os.userInfo();
 
 	console.log('System:', type);
 	console.log('Release:', release);
